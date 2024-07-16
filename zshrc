@@ -60,8 +60,13 @@ export PATH="./bin:./node_modules/.bin:${PATH}:/usr/local/sbin"
 # Store your own aliases in the ~/.aliases file and load the here.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 
+alias pip=pip3
+ln -s $(which pip3) /usr/local/bin/pip
+
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR=code
+export PATH=/opt/homebrew/bin:./bin:./node_modules/.bin:/Users/brunobiehler/.rbenv/bin:/Users/brunobiehler/.pyenv/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/sbin
+eval "$(direnv hook zsh)"
